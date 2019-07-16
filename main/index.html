@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+	<title>Olympic Games Statistics</title>
+	<header>
+		<ul>
+			<li>Roberto M. Delfino</li>
+			<li>Behzad Nourani</li>
+		</ul>
+
+		<h1>Olympic Games Statistic</h1>
+		<img src = "logo.png"/>
+
+		
+	</header>
+
+<!-- Load d3.js -->
+<script src="./d3.v4.js"></script>
+<script src="./geo_utils/d3-scale-chromatic.v1.min.js"></script>
+<script src="./geo_utils/d3-geo-projection.v2.min.js"></script>
+
+<link rel='stylesheet' href="./main_styles.css">
+<link rel="stylesheet" href="./visualizations/linechart/linechart_style.css">
+<link rel="stylesheet" href="./visualizations/choroplet/map_styles.css">
+<link rel="stylesheet" href="./visualizarions/scatter/scatter_style.css">
+<link rel="stylesheet" href="./visualizarions/legend/legend_style.css">
+
+<!-- <script src="./visualizations/radar/RadarChart.js"></script> -->
+
+</head>
+
+
+
+<body>
+
+
+<!-- tooltip -->
+<!--<div id="tooltip" class="hidden"> <p><strong>Match Played in</strong></p> <p><span id="value">100</span></p></div> -->
+<!-- <div id="tooltip2" class="hidden" style="diplay: inline"> <p><strong>Country</strong></p> <p><span id="value2">462</span></p></div> -->
+<!--<div id="tooltip3" class="hidden"style="diplay: inline"> <p ><strong id="value4">Exact Value</strong></p> <p><span id="value3">100</span> -->
+
+<!-- Create an element where the map will take place -->
+
+<!-- <div id="top" width="100%">
+
+	<p style="text-align:left;">
+		Roberto M. Delfino
+		<span><img src="logo.png" width="100" style="float:center;">
+
+		<span style="float:right;">Olympic Games Analysis</span>
+	</p></span>
+		
+
+	<p style="text-align:left;">
+		Behzad Nourani
+		<span style="float:right;">Visual Analytics 2018/2019</span>
+	</p>
+</div> -->
+
+<div id="choro" style="display: inline"></div>
+<div id="legend" style="display: inline"></div>
+<div id="radar" style='display: inline'></div>
+<div id="chart" style="display: inline"></div>
+<div id="scatter" style='display: inline'></div>
+
+<script src="./visualizations/linechart/linechart_js.js"></script>
+<script src="./visualizations/choropleth/map.js"></script>
+<script src="./visualizations/legend/legend.js"></script>
+<script src="./visualizations/radar/radar_new.js"></script>
+<script src="./visualizations/scatter/scatter.js"></script>
+
+<script>draw_scatterplot()</script>
+
+
+
+</body>
