@@ -6956,6 +6956,9 @@ function showCountry(id, team_color){
 	.style('opacity', 1)
 	.on("mouseover", function(d, i) {
 		//console.log(d.name)
+
+		putInEvidence(d.id, '#f00')
+
 		if (array[d.n_country])	{
 			svg2.append("text")
 			.attr("class", "title-text")
@@ -6976,6 +6979,9 @@ function showCountry(id, team_color){
 		}
     })
     .on("mouseout", function(d) {
+
+    	removeEvidence(d.id)
+
       svg2.select(".title-text").remove();
 	  d3.selectAll('.circle')
 					.style('opacity', circleOpacity);
@@ -6994,6 +7000,7 @@ function addCircles(id, team_color)	{
 	/* Add circles in the line */
 
 	//console.log(data)
+
 
 	var current_obj = ''
 
@@ -7047,6 +7054,8 @@ function addCircles(id, team_color)	{
 	.attr("class", id + "1")
 	.on("mouseover", function(d) {
 
+			putInEvidence(id, '#f00')
+
 		  if (d.medals < 450)	{
 		  //d3.select(this)     
 			//.style("cursor", "pointer")
@@ -7092,6 +7101,7 @@ function addCircles(id, team_color)	{
 			//.duration(duration)
 			//.selectAll(".text").remove();
 
+			removeEvidence(id)
 
 			div_lc.transition()		
                 .duration(10)		

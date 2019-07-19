@@ -3638,6 +3638,8 @@ function showRadar(noc, col){
              .style("fill", col)
              .style("fill-opacity", cfg.opacityArea)
              .on('mouseover', function (d){
+
+             		putInEvidence(noc, '#f00')
              		//console.log('OVER AN AREA: noc='+noc+', col='+col)
                       z = "polygon."+d3.select(this).attr("class");
                       //console.log(d3.select(this).attr('class'))
@@ -3649,6 +3651,8 @@ function showRadar(noc, col){
                        .style("fill-opacity", .7);
                       })
              .on('mouseout', function(){
+
+             			removeEvidence(noc)
                       g.selectAll("polygon")
                        .transition(200)
                        .style("fill-opacity", cfg.opacityArea);
@@ -3719,6 +3723,8 @@ function showRadar(noc, col){
       		//console.log('OVER A POINT')
       		//console.log(d)
 
+      		putInEvidence(noc, '#f00')
+
             newX =  parseFloat(d3.select(this).attr('cx')) - 10;
             newY =  parseFloat(d3.select(this).attr('cy')) - 50;
 
@@ -3758,6 +3764,9 @@ function showRadar(noc, col){
               .style("fill-opacity", .7);
             })
       .on('mouseout', function(){
+
+      		removeEvidence(noc)
+
             tooltip
               .transition(200)
               .style('opacity', 0);
